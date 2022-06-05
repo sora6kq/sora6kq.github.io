@@ -1,0 +1,74 @@
+
+:root{
+    --bodybg: #191819;
+    --divbg: #181818;
+    --fontcol: #afadac;
+    --bordercol: #303030;
+    --shadow: #111111;
+    --linkcol1: #f25757;
+    --linkcol2: #e89d88;
+}
+
+@font-face {
+    font-family: jetbrains;
+    src: url(./JetBrainsMono-Medium.ttf);
+}
+
+*{
+    font-family: jetbrains;
+}
+
+body{
+    margin:0;
+    background-color: var(--bodybg);
+}
+
+.nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--divbg);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    box-shadow: 0 0 2px 2px var(--shadow);
+    border: 1px solid var(--bordercol);
+}
+.nav li {
+    float: left;
+  }
+  
+.nav li a {
+    display: block;
+    color: var(--linkcol1);
+    font-size: 1.5em;
+    padding: 0.5em;
+    text-decoration: none;
+  }
+
+.avatar{
+    height:10em;
+    padding: 2em;
+    border-radius: 2px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:25vw 75vw;
+    margin-top: 4em;
+}
+
+.fetch, .content{
+    border-radius: 1px;
+    box-shadow: 0 0 2px 2px var(--shadow);
+    color: var(--fontcol);
+    background-color: var(--divbg);
+    border: 1px solid var(--bordercol);
+    padding: 2em;
+    font-size: 1em;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--linkcol2);
+}
