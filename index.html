@@ -10,51 +10,106 @@
 
     <body>
         <ul class="nav">
-            <li><a href="https://sora6kq.github.io">$HOME</a></li>
-            <li><a href="https://github.com/sora6kq">@github</a></li>
+            <li><a onclick="home()">🏠 home</a></li>
+            <li><a onclick="anime()">🇯🇵 anime</a></li>
+            <li><a onclick="movies()">📺 movies</a></li>
+            <li><a onclick="about()">🫠 about</a></li>
+            <li><a href="https://github.com/sora6kq">🐈 github</a></li>
         </ul>
 
         <div class="container">
-        <div class="fetch">
-            <h2>$ ./fetch.sh </h2>
-            <img class="avatar" src="https://github.com/sora6kq.png"> <br>
-            usr - Sora <br>
-            host - github <br>
-            os - arch-linux <br>
-            langs - shell, C <br> <br>
-            
-            things I like: <br>
-            - dumplings <br>
-            - rain <br>
-            - cats <br>
+            <div class="fetch">
+                <h2>$ ./fetch.sh </h2>
+                <img class="avatar" src="https://github.com/sora6kq.png"> <br>
+                usr - Sora <br>
+                host - github <br>
+                os - arch-linux <br>
+                langs - shell, C <br> <br>
+                
+                things I like: <br>
+                - dumplings <br>
+                - rain <br>
+                - cats <br>
+            </div>
+
+
+            <div class="content" id="home" style="display:block;">
+                <h2>$ blogs </h2>
+                <a href="" class="link">I am not a web dev.</a> <br>
+                <a href="" class="link">Js is pretty good btw.</a> <br>
+                <a href="" class="link">Everything should be web assembly.</a> <br>
+                <a href="" class="link">13 reasons why your crush will never like you.</a> <br>
+                <a href="" class="link">What is Michael Jackson doing in demon slayer ?</a> <br>
+                <a href="" class="link">Using a terminal wont make you a hacker.</a> <br>
+            </div>
+
+            <div class="content" id="anime" style="display:none;">
+                <h2>$ anime </h2>
+                Hyouka <br>
+                Kimetsu no yaiba <br>
+                Promised Neverland <br>
+                Death Note <br>
+                Jujutsu Kaisen <br>
+                Your name <br>
+                Weathering with you <br>
+                Suzume no Tojimari (coming soon) <br>
+            </div>
+
+            <div class="content" id="movies" style="display:none;">
+                <h2>$ movies</h2>
+                Interstellar <br>
+                Shutter Island <br>
+                Inception <br>
+                Arrival <br>
+                Blade Runner 2049 <br>
+                Dune <br>
+            </div>
+
+            <div class="content" id="about" style="display:none;">
+                <h2>$ about</h2>
+                <span>
+                    This website is part of a webring. FYI, in the era of web1.0
+                    (before js frameworks and big social media), lots of people
+                    would make personal websites on any topic imaginable, and what
+                    they would do is form groups and have a link to each other's
+                    websites on their own, forming a ring.
+                    <br><br>
+                    ⚠️ I tried to avoid JS but I couldn't, it is inevitable. ⚠️
+                </span>
+            </div>
+
         </div>
 
-        <div class="content">
-            <h2>$ blogs </h2>
-            <a href="" class="link">I am not a web dev.</a> <br>
-            <a href="" class="link">Js is pretty good btw.<br></a>
-            <a href="" class="link">Everything should be web assembly.</a><br> <br>
-
-            <h2>$ anime </h2>
-            Hyouka <br>
-            Kimetsu no yaiba <br>
-            Promised Neverland <br>
-            Death Note <br>
-            Jujutsu Kaisen <br>
-            Your name <br>
-            Weathering with you <br>
-            Suzume no Tojimari (coming soon) <br>
-
-            <h2>$ movies</h2>
-            Interstellar <br>
-            Shutter Island <br>
-            Inception <br>
-            Arrival <br>
-            Blade Runner 2049 <br>
-            Dune <br>
-        </div>
-        </div>
+        <ul class="ring">
+            <li class="ring-link"><a href="https://acutewoof.github.io">🡨 woof</a></li>
+            <li class="ring-link"><a href="https://metastag.github.io">-palms-</a></li>
+            <li class="ring-link"><a href="https://woodiewood2130.github.io">woodiewood 🡪</a></li>
+        </ul>
 
     </body>
+
+    <script>
+        let active_div = "home"
+        function home() {
+            document.getElementById(active_div).style.display="none";
+            document.getElementById("home").style.display="block";
+            active_div = "home"
+        }
+        function anime() {
+            document.getElementById(active_div).style.display="none";
+            document.getElementById("anime").style.display="block";
+            active_div = "anime"
+        }
+        function movies() {
+            document.getElementById(active_div).style.display="none";
+            document.getElementById("movies").style.display="block";
+            active_div = "movies"
+        }
+        function about() {
+            document.getElementById(active_div).style.display="none";
+            document.getElementById("about").style.display="block";
+            active_div = "about"
+        }
+    </script>
 
 </html>

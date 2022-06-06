@@ -5,8 +5,7 @@
     --fontcol: #afadac;
     --bordercol: #303030;
     --shadow: #111111;
-    --linkcol1: #db6b6b;
-    --linkcol2: #e89d88;
+    --linkcol: #bc9393;
 }
 
 @font-face {
@@ -40,8 +39,8 @@ body{
   
 .nav li a {
     display: block;
-    color: var(--linkcol1);
-    font-size: 1.5em;
+    color: var(--fontcol);
+    font-size: 1.25em;
     padding: 0.5em;
     text-decoration: none;
   }
@@ -58,7 +57,7 @@ body{
     margin-top: 4em;
 }
 
-.fetch, .content{
+.fetch {
     border-radius: 1px;
     box-shadow: 0 0 2px 2px var(--shadow);
     color: var(--fontcol);
@@ -68,7 +67,41 @@ body{
     font-size: 1em;
 }
 
-.link{
+.content {
+    border-radius: 1px;
+    box-shadow: 0 0 2px 2px var(--shadow);
+    color: var(--fontcol);
+    background-color: var(--divbg);
+    border: 1px solid var(--bordercol);
+    padding: 2em;
+    font-size: 1em;
+}
+
+.link {
     text-decoration: none;
-    color: var(--linkcol2);
+    color: var(--linkcol);
+}
+
+.ring{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--divbg);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.ring li a {
+    display: block;
+    color: var(--linkcol);
+    font-size: 1em;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.ring-link{
+    display: inline-block;
+    padding: 1em;
 }
