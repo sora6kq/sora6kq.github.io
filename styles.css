@@ -40,21 +40,21 @@ body{
 .nav li a {
     display: block;
     color: var(--fontcol);
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 0.5em;
     text-decoration: none;
   }
 
-.avatar{
+.pic{
     height:10em;
-    padding: 2em;
+    padding: 1em;
     border-radius: 2px;
 }
 
 .container{
     display: grid;
     grid-template-columns:25vw 75vw;
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
 .fetch {
